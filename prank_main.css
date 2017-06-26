@@ -1,0 +1,74 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: linen;
+}
+/* Add Custom CSS Below this line */
+.psBody
+{
+
+}
+.container
+{
+	height: 400px;
+	background: url("http://www.animateit.net/data/media/april2014/9999.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#heading
+{
+	margin: 10px auto;
+	width: 26%;
+	font-family:"Lucida Handwriting";
+	color: #811A39;
+}
+input 
+{
+	display: block;
+	margin: 20px auto;
+	width: 25%;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+
+}
+#myButton
+{
+	position: relative;
+	left:45%;
+	top: 10px;
+}
+.form
+{
+	position: relative;
+	top: 20px;
+}
+.text
+{
+position: relative;
+    top: 80px;
+    max-width: 60%;
+    margin: 10px auto;
+    font-size: 18px;
+    color: #D41C52;
+    }
+@media (max-width: 500px)
+{
+	#heading
+	{	text-align: center;
+		width: 52%;
+	}
+	input
+	{
+		width: 50%;
+	}
+	#myButton
+	{
+	    margin: 10px 46% 0px 38%;
+	}
+}

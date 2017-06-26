@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>LOVE CALCULATOR</title>
+	<link href="normalize.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="prank_main.css" rel="stylesheet" type="text/css">
+	<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+<header>
+	<b><h2 id="heading"> Love Calculator!!</h2></b>
+</header>
+		<div class="form">
+		<input type="text" placeholder="Your Name">
+		<input type="text" placeholder="Your Crush/gf/bf Name">
+		<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" style="background: #D41C52" >
+  Calculate
+</button>
+</div>
+
+<div class="text" >
+	<p>Enter Your and Your Crush/GF/BF Name!</p>
+	<br>
+	<p>We all know that a name can tell alot about a person. Names are not randomly choosen: they all have a meaning. Doctor Love knew this so he made another great invention just for the lonely you!</p><br>
+	<p>The Love Calculator is an affective way to get an impression of what the chances are on a relationship between two people. </p>
+	<br>
+	<p>Enter Your and your Crush's Full name and click Calculate Button.</p>
+</div>
+</div>
+</body>
+</html>
+<!--################## JS ########################-->
+<script>
+  /*$('#myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    // business logic...
+
+    $btn.button('reset')
+  })*/
+  document.getElementById("myButton").onclick = function () {
+        location.href = "prank_successful.html";
+    };
+</script>
