@@ -57,6 +57,10 @@ position: relative;
     font-size: 18px;
     color: #D41C52;
     }
+  .error
+  {
+  	border: 1px solid red;
+  }
 @media (max-width: 500px)
 {
 	#heading
