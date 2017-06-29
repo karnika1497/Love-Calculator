@@ -21,10 +21,13 @@
 <div class="container">
 <header>
 	<b><h2 id="heading"> Love Calculator!!</h2></b>
+  
 </header>
 		<div class="form">
 		<input type="text" placeholder="Your Name" id="yn" >
 		<input type="text" placeholder="Your Crush/gf/bf Name">
+    <p id="loading" style="position: relative;
+    left: 46%; font-weight: 300;"> </p>
 		<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" style="background: #D41C52" >
   Calculate
 </button>
@@ -42,6 +45,7 @@
 </body>
 
 <!--################## JS ########################-->
+<script type="text/javascript" src="jquery.js"></script>
 <script>
   /*$('#myButton').on('click', function () {
     var $btn = $(this).button('loading')
@@ -57,8 +61,13 @@
   	 var name= document.querySelector("#yn").value;
   	 if(name.length != 0)
   {
-      
+    
+    $('#loading').html("<img src='https://learnhownow.com/assets/ajax-loader.gif' style='height:60px; width:60px;'>");
+      setTimeout(function(){
         location.href = "prank_successful.html";
+
+
+      }, 7000);
     }
      else{
 
