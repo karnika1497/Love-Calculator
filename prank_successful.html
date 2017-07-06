@@ -19,15 +19,22 @@
     <style>
     	body
     	{
-    		background: url(lbg.jpg);
+    		background: url(prank.jpg);
     		background-size: cover;
     		text-align: center;
     	}
-    	h3
+    	h2
     	{
     		font-size: 36px;
-    		color: white;
-    		line-height: 50px;
+    		    color: white;
+    line-height: 50px;
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    top: 76px;
+    padding: 8px;
+    border: 1px solid black;
+    max-width: 700px;
+    left: 325px;
     	}
     	span
     	{
@@ -46,29 +53,54 @@
     	}
     	p
     	{
-    		color: white;
-    		margin:20px;
-    		font-size: 20px;
+
+    		color: crimson;
+    		margin:225px;
+    		font-size: 100px;
     	}
     	.impText
     	{
     		font-size: 28px;
     	}
+        @media (max-width: 500px)
+{
+    body
+        {
+            background: url(prank.jpg);
+            background-size: cover;
+            text-align: center;
+        }
+    p
+    {
+        font-size: 70px;
+        margin: 225px;
+    }
+    h2
+    {
+        font-size: 24px;
+        left:-20px;
+    }
+}
     </style>
 </head>
 <body>
 <audio src="comic008.mp3" autoplay></audio>
-<h3>You have successfully been<br><span><b>FOOLED!</b></span></h3>
+<b><p id="percentage"></p></b>
+<!-- <h2>Thanks For Calculating....</h2>
+ --><!-- <h3>You have successfully been<br><span><b>FOOLED!</b></span></h3>
 <p>Your Name & Crush's Name has been Mailed to </p>
 <p class="impText"><b>Karnika</b></p>
 <p>at</p>
 <p class="impText"><b>knnu****@gmail.com</b></p>
 <button id="btn"><b>Cancel Sending</b></button>
-<img src="https://s-media-cache-ak0.pinimg.com/originals/37/e6/54/37e6546555565309406876ec766d5b05.gif">
+<img src="https://s-media-cache-ak0.pinimg.com/originals/37/e6/54/37e6546555565309406876ec766d5b05.gif"> -->
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-	document.querySelector('button').addEventListener('click',function(){
-		alert("Don't worry! It was just a prank. We havn't send any mail to anyone. Have a nice day!!");
-	});
+	// document.querySelector('button').addEventListener('click',function(){
+	// 	alert("Don't worry! It was just a prank. We havn't send any mail to anyone. Have a nice day!!");
+	// });
+    var num= ~~(Math.random()*100);
+    $('#percentage').text(num + "%");
 </script>
 </body>
 </html>
